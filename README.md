@@ -18,12 +18,15 @@ Inclua um README.md com os passos a serem executados no desafio e a porta em que
 # [1] DOCKER #
 
 1- Start docker.
+
 2- sh: docker-compose up -d
 
 # [2] RABBITMQ #
 
 1- Access http://localhost:15672
+
 2- Create a new queue: orders
+
 3- Create a new binding: amq.direct
 
 # [3] MIGRATION #
@@ -33,11 +36,13 @@ Inclua um README.md com os passos a serem executados no desafio e a porta em que
 # [4] APPLICATION #
 
 1- sh: cd cmd/ordersystem
+
 2- sh: go run main.go wire_gen.go
 
 # [5] API REST #
 
 1- Create order: api/create_order.http
+
 2- List orders: api/list_orders.http
 
 # [6] GRAPHQL #
@@ -55,6 +60,7 @@ mutation {
     FinalPrice
   }
 }
+
 2- List orders:
 query {
   listOrders {
@@ -68,4 +74,8 @@ query {
 # [7] GRPC #
 
 1- sh: evans -r repl
+
 2- call CreateOrder
+
+3- call ListOrders
+
