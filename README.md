@@ -18,22 +18,27 @@ Inclua um README.md com os passos a serem executados no desafio e a porta em que
 ## [1] DOCKER ##
 
 1- Start docker.
+
 2- sh: docker-compose up -d
 
 ## [2] RABBITMQ ##
 
 1- Access http://localhost:15672
+
 2- Create a new queue: orders
+
 3- Create a new binding: amq.direct
 
 ## [3] API REST ##
 
 1- Create order: api/create_order.http
+
 2- List orders: api/list_orders.http
 
 ## [4] GRAPHQL ##
 
 1- Create order:
+
 mutation {
   createOrder(input: {
     id: "b",
@@ -46,7 +51,9 @@ mutation {
     FinalPrice
   }
 }
+
 2- List orders:
+
 query {
   listOrders {
     id
@@ -58,5 +65,6 @@ query {
 
 ## [5] GRPC ##
 
-1- sh: evans -r repl
-2- call CreateOrder
+1- call CreateOrder
+
+2- call ListOrders
